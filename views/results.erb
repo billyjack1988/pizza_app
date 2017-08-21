@@ -1,3 +1,10 @@
 <h1> your results are <%final_top.each do |x|%></h1> 
 <h2> <%=x%> </h2>
  <%end%>
+
+<form method = "post" action = "result">
+    <h2> Would you like delivery</h2>
+        <p><input type= "radio" name= "delivery" value="yes"> YES </p>
+        <p><input type= "radio" name= "delivery" value="no"> No </p>
+            <input type='submit'></center>
+</form>

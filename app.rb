@@ -25,6 +25,27 @@ post '/confirm' do
 end
 
 get '/result' do
-  erb :results, locals: {final_top: session[:final_picks]}
+  erb :results, locals: {final_top: session[:final_picks], delivery: session[:delivery]}
 end
+
+post '/result' do
+      session[:delivery] = params[:delivery]
+    if session[:delivery] == "yes" 
+        redirect '/address'
+    else session[:delivery] == "no"
+        redirect '/results'
+    end
+end
+
+get '/address' do
+    erb :address 
+end
+
+
+
+
+
+
+
+
 
