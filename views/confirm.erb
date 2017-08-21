@@ -1,0 +1,19 @@
+<form  method = "post" action = "confirm">
+
+<%picked_crust.each do |x| %>
+<input type = "checkbox" name = "p_toppings[]" value = "<%=x%>"> <%=x%>
+<%end%>
+<%picked_meat.each do |y| %>
+<input type = "checkbox" name = "p_toppings[]" value = "<%=y%>"> <%=y%>
+<%end%>
+<%picked_sause.each do |z| %>
+<input type = "checkbox" name = "p_toppings[]" value = "<%=z%>"> <%=z%>
+<%end%>
+<%picked_veggies.each do |v| %>
+<input type = "checkbox" name = "p_toppings[]" value = "<%=v%>"> <%=v%>
+<%end%>
+<%picked_size.each do |s| %>
+<input type = "checkbox" name = "p_toppings[]" value = "<%=s%>"> <%=s%>
+<%end%>
+<input type = "submit" value = "enter">
+</form>
