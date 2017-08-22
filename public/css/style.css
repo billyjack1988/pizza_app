@@ -1,0 +1,30 @@
+.cent {
+    text-align: center;
+}
+
+.back_gr {
+    background-image: url("/images/pizza.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text_color {
+    color: white
+}
+
+.font_size {
+    font-size: 400%;
+}
+
+.font {
+    font-size: 300%;
+}
+
+.f_size {
+    font-size: 200%;
+}
+
+.border_1 {
+    border: 2px solid white;
+    border-radius: 12px;
+}

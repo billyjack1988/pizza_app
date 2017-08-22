@@ -1,19 +1,21 @@
-<form  method = "post" action = "confirm">
+<h1 class = "cent text_color font_size"> Please Confrim Your Order </h1>
 
-<%picked_crust.each do |x| %>
+<form class = "text_color font border_1" method = "post" action = "confirm"><center>
+
+<%picked_size.each do |x| %>
 <input type = "checkbox" name = "p_toppings[]" value = "<%=x%>"> <%=x%>
-<%end%>
-<%picked_meat.each do |y| %>
+<%end%><br>
+<%picked_crust.each do |y| %>
 <input type = "checkbox" name = "p_toppings[]" value = "<%=y%>"> <%=y%>
-<%end%>
+<%end%><br>
 <%picked_sause.each do |z| %>
 <input type = "checkbox" name = "p_toppings[]" value = "<%=z%>"> <%=z%>
-<%end%>
+<%end%><br>
 <%picked_veggies.each do |v| %>
 <input type = "checkbox" name = "p_toppings[]" value = "<%=v%>"> <%=v%>
-<%end%>
-<%picked_size.each do |s| %>
+<%end%><br>
+<%picked_meat.each do |s| %>
 <input type = "checkbox" name = "p_toppings[]" value = "<%=s%>"> <%=s%>
-<%end%>
-<input type = "submit" value = "Confirm">
+<%end%><br>
+<input type = "submit" value = "Confirm"></center>
 </form>

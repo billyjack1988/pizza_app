@@ -21,7 +21,7 @@ end
 
 post '/confirm' do
   session[:final_picks] = params[:p_toppings]
-  redirect '/result?'
+  redirect '/result'
 end
 
 get '/result' do
@@ -33,13 +33,20 @@ post '/result' do
     if session[:delivery] == "yes" 
         redirect '/address'
     else session[:delivery] == "no"
-        redirect '/results'
+        redirect '/result'
     end
 end
 
 get '/address' do
     erb :address 
 end
+
+post '/result_w_add' do
+    addres = params[:add]
+    erb :result_w_add, locals: {final_top: session[:final_picks], add: addres}
+end
+
+
 
 
 
