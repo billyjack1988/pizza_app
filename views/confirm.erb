@@ -3,22 +3,27 @@
 <form class = "text_color font border_1" method = "post" action = "confirm_1"><center>
 <%i=0%>
 <%picked_size.each do |x| %>
-<input type = "checkbox" name = "p_toppings[<%=i%>]" value = "<%=x%>"> <%=x%>
+    <input type = "checkbox" name = "p_toppings[<%=i%>]" value = "<%=x%>"> <%=x%>
+    <%i += 1%>
 <%end%><br>
 <%picked_crust.each do |y| %>
-<input type = "checkbox" name = "p_toppings[<%=i%>]" value = "<%=y%>"> <%=y%>
+    <input type = "checkbox" name = "p_toppings[<%=i%>]" value = "<%=y%>"> <%=y%>
+    <%i += 1%>
 <%end%><br>
 <%picked_sause.each do |z| %>
-<input type = "radio"  name = "p_toppings[<%=i%>]" value = "<%=z%>" checked>Yes
-<input type = "radio"  name = "p_toppings[<%=i%>]" value = " " >No <%=z%><br><%i += 1%>
+     <input type = "radio"  name = "p_toppings[<%=i%>]" value = "<%=z%>" checked>Yes
+     <input type = "radio"  name = "p_toppings[<%=i%>]" value = " " >No <%=z%><br>
+    <%i += 1%>
 <%end%>
-<%picked_veggies.each do |v| %>
-<input type = "radio" name = "p_toppings[<%=i%>]" value = "<%=v%>" checked>Yes
-<input type = "radio" name = "p_toppings[<%=i%>]" value = " ">No <%=v%><br><%i+=1%>
+<%picked_veggies.each do |v| %> 
+    <input type = "radio" name = "p_toppings[<%=i%>]" value = "<%=v%>" checked>Yes
+    <input type = "radio" name = "p_toppings[<%=i%>]" value = " ">No <%=v%><br>
+    <%i+=1%>
 <%end%>
-<%picked_meat.each do |s| %>
-<input type = "radio" name = "p_toppings[<%=i%>]" value = "<%=s%>" checked>Yes
-<input type = "radio" name = "p_toppings[<%=i%>]" value = " "> No <%=s%><br><%i+=1%>
+<%picked_meat.each do |s| %> 
+    <input type = "radio" name = "p_toppings[<%=i%>]" value = "<%=s%>" checked>Yes
+    <input type = "radio" name = "p_toppings[<%=i%>]" value = " "> No <%=s%><br>
+    <%i+=1%>
 <%end%>
 <input type = "submit" value = "Confirm"></center>
 </form>

@@ -28,3 +28,8 @@
     border: 2px solid white;
     border-radius: 12px;
 }
+
+#x {
+    background-image: url("/images/aaa.jpg");
+    background-size: 20% 20%;
+}
