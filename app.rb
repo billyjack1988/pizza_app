@@ -12,15 +12,16 @@ post '/topps' do
     session[:p_sause] = params[:sause]
     session[:p_veggies] = params[:veggies]
     session[:p_size] = params[:size]
-    redirect '/confirm'
+    redirect '/confirm_1'
 end
 
-get '/confirm' do
-    erb :confirm, locals: {picked_crust: session[:p_crust], picked_meat:  session[:p_meat], picked_sause: session[:p_sause], picked_veggies: session[:p_veggies], picked_size: session[:p_size]}
+get '/confirm_1' do
+    erb :confirm, locals: {picked_crust: session[:p_crust], picked_meat: session[:p_meat], picked_sause: session[:p_sause], picked_veggies: session[:p_veggies], picked_size: session[:p_size]}
 end
 
-post '/confirm' do
+post '/confirm_1' do
   session[:final_picks] = params[:p_toppings]
+#   p"#{fuckyou}"
   redirect '/result'
 end
 
