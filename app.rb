@@ -20,7 +20,8 @@ get '/confirm_1' do
 end
 
 post '/confirm_1' do
-  session[:final_picks] = params[:p_toppings]
+  final = params[:p_toppings]
+  session[:final_picks] = final.values
 #   p"#{fuckyou}"
   redirect '/result'
 end
