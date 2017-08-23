@@ -26,7 +26,7 @@ post '/confirm_1' do
 end
 
 get '/result' do
-  erb :results, locals: {final_top: session[:final_picks], delivery: session[:delivery]}
+  erb :results, locals: {final_top: session[:final_picks]}
 end
 
 post '/result' do
