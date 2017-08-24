@@ -12,6 +12,7 @@ post '/topps' do
     session[:p_sause] = params[:sause]
     session[:p_veggies] = params[:veggies]
     session[:p_size] = params[:size]
+    session[:pizzas] = params[:pizzas]
     redirect '/confirm_1'
 end
 
@@ -47,6 +48,8 @@ post '/result_w_add' do
     addres = params[:add]
     erb :result_w_add, locals: {final_top: session[:final_picks], add: addres}
 end
+
+
 
 
 
